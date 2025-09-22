@@ -7,6 +7,8 @@ public class HelloUniverse {
         char premiereLettreDuNom = 'J';
         String nomDuCapitaine = "John";
         boolean isCOld = false;
+        float y=5.0f/2.0f;
+        int x=5%2;
 
         int initPlanets = Planete.iniNbPlanets(9);
         String correctionNbPlanetes = Planete.updateNbPlanetes(9, -1);
@@ -16,5 +18,7 @@ public class HelloUniverse {
         System.out.println("initalisation des planêtes : " + initPlanets);
         System.out.println(correctionNbPlanetes);
         System.out.println(nbPlanets);
+        System.out.println(y);
+        System.out.println(x);
     }
 }
