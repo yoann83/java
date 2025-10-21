@@ -1,4 +1,8 @@
 public class Planete {
+    String nom;
+    long diametre;
+    String matiere;
+
     private static int nombreActuelPlanetes;
 
     public static String updateNbPlanetes(int actual, int correction) {
@@ -14,9 +18,17 @@ public class Planete {
     public static int getNbPlanets() {
         return nombreActuelPlanetes;
     }
-    
+
     public static int iniNbPlanets(int nouveauNombre) {
         nombreActuelPlanetes = nouveauNombre;
         return nouveauNombre;
+    }
+
+    public void revolution() {
+        System.out.println("Je suis la planète " + nom + " et je tourne autour de mon étoile.");
+    }
+
+    public void rotation() {
+        System.out.println("Je suis la planète " + nom + " et je tourne sur moi-même.");
     }
 }
