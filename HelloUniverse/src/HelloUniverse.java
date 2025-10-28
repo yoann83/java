@@ -10,6 +10,26 @@ public class HelloUniverse {
         float y=5.0f/2.0f;
         int x=5%2;
 
+        // Comparaison
+        String chaine1 = "jeSuisLeTesT";
+        String chaine2 = "jeSuisLeTest";
+        String chaine3 = "JESuisLeTesT";
+        // simple
+        Boolean testCompareSimple = chaine1 == chaine2;
+        Boolean testCompareEquals = chaine1.equals(chaine2);
+        // equals et equalIgnoreCase
+        Boolean testCompareEqualIgnoreCase = chaine1.equalsIgnoreCase(chaine3);
+
+        // true, car il a dèjà aloué un espace (string) avec la meme valeur
+        // donc java optimise en récupérent la meme valeur stcoké
+        System.out.println("Compare Simple : " + testCompareSimple);
+
+        // true, car il test vraiment et strictement les valeurs comme l'équivalence avec ===
+        System.out.println("Compare Equals : " + testCompareEquals);
+
+        // true, car qualsIgnoreCase format en smallCase et test
+        System.out.println("Compare EqualIgnoreCase : " + testCompareEqualIgnoreCase);
+
         /*----------------------------------------*/
 
         Planete mercure = new Planete();
