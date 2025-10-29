@@ -1,34 +1,19 @@
 package exercices;
 
-public class Planete {
-    // attributs static avant les attributs d'instance
-    static String forme = "Sphérique";
-    static int nbPlanetesDecouvertes = 0;
+// par defaut une class extendes (herite) de la class Object
+public class Planete extends Object {
     String nom;
     int diametre;
     String matiere;
     int totalVisiteurs;
     Atmosphere atmosphere;
-    Vaisseau vaisseauActuel;
+    Vaisseau vaisseauAccoste;
+    static String forme="Sphérique";
+    static int nbPlanetesDecouvertes;
 
-    // le constructeur sans paramètre en premier
-    public Planete() {
-        nbPlanetesDecouvertes++;
-    }
-
-    // Constructeur avec paramètre nom
-    public Planete(String nom) {
+    Planete(String nom){  // Constructeur avec paramètre
         this.nom = nom;
         nbPlanetesDecouvertes++;
-    }
-
-    // methode static accessible de n'importe ou et avant les méthodes d'instances
-    static String expansion(double distance){
-        if (distance < 14) {
-            return "Oh la la mais c'est super rapide !";
-        } else {
-            return "Je rêve ou c'est plus rapide que la lumière ?";
-        }
     }
 
     int revolution(int degres){
@@ -42,9 +27,23 @@ public class Planete {
     }
 
     Vaisseau accueillirVaisseau(Vaisseau nouveauVaisseau){
-        totalVisiteurs += nouveauVaisseau.nbPassagers;
-        Vaisseau vaisseauEnPartance = vaisseauActuel;
-        vaisseauActuel = nouveauVaisseau;
-        return vaisseauEnPartance;
+
+        totalVisiteurs+=nouveauVaisseau.nbPassagers;
+
+        Vaisseau vaisseauPrecedent=vaisseauAccoste;
+
+        vaisseauAccoste=nouveauVaisseau;
+
+        return vaisseauPrecedent;
+
+    }
+
+    static String expansion (double milliardsDAnneesLumiere){
+        if (milliardsDAnneesLumiere < 14){
+            return "Oh la la mais c'est super rapide !";
+        }
+        else {
+            return "Je rêve ou c'est plus rapide que la lumière ?";
+        }
     }
 }
