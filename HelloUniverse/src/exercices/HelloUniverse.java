@@ -34,5 +34,25 @@ public class HelloUniverse {
         neptune.matiere = "Gazeuse";
 
         System.out.println("Le nombre de planètes découvertes est actuellement de "+Planete.nbPlanetesDecouvertes);
+
+        VaisseauDeGuerre chasseur = new VaisseauDeGuerre();
+        chasseur.type = "CHASSEUR";
+        chasseur.blindage = 156;
+        chasseur.resistanceDuBouclier = 2;
+
+        VaisseauCivil vaisseauMonde = new VaisseauCivil();
+        vaisseauMonde.type = "VAISSEAU-MONDE";
+        vaisseauMonde.blindage = 4784;
+        vaisseauMonde.resistanceDuBouclier = 30;
+
+        vaisseauMonde.activerBouclier();
+        chasseur.activerBouclier();
+
+        chasseur.attaque(vaisseauMonde, "lasers photoniques", 3);
+
+        vaisseauMonde.desactiverBouclier();
+
+        System.out.println(vaisseauMonde.resistanceDuBouclier);
+        System.out.println(vaisseauMonde.blindage);
     }
 }
