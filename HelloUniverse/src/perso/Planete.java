@@ -1,11 +1,21 @@
 package perso;
 
 public class Planete {
+    // attributs static avant les attributs d'instance
+    private static int nombreActuelPlanetes;
     String nom;
     long diametre;
     String matiere;
 
-    private static int nombreActuelPlanetes;
+    // le constructeur sans paramètre en premier
+    Planete() {
+        System.out.println("Je suis le construsteur de la class Planete non main avant tout !");
+    }
+
+    // Constructeur avec paramètre nom
+    public Planete(String nom) {
+        this.nom = nom;
+    }
 
     public static String updateNbPlanetes(int actual, int correction) {
         nombreActuelPlanetes = actual;
