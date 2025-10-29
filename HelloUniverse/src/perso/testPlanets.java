@@ -1,3 +1,5 @@
+package perso;
+
 public class testPlanets {
 
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package perso;
+
 public class BureauDeChange {
     public static void main(String[] args) {
         // Variables pour le montant initial et le taux de change

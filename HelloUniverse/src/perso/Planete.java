@@ -1,3 +1,5 @@
+package perso;
+
 public class Planete {
     String nom;
     long diametre;
