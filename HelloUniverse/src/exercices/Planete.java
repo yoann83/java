@@ -1,17 +1,13 @@
 package exercices;
 
-// par defaut une class extendes (herite) de la class Object
-public class Planete extends Object {
+public class Planete {
     String nom;
     int diametre;
-    String matiere;
-    int totalVisiteurs;
     Atmosphere atmosphere;
-    Vaisseau vaisseauAccoste;
     static String forme="Sphérique";
     static int nbPlanetesDecouvertes;
 
-    Planete(String nom){  // Constructeur avec paramètre
+    Planete(String nom){
         this.nom = nom;
         nbPlanetesDecouvertes++;
     }
@@ -24,18 +20,6 @@ public class Planete extends Object {
     int rotation(int degres){
         System.out.println("Je suis la planète "+nom+" et je tourne sur moi-même de "+degres+" degrés.");
         return degres/360;
-    }
-
-    Vaisseau accueillirVaisseau(Vaisseau nouveauVaisseau){
-
-        totalVisiteurs+=nouveauVaisseau.nbPassagers;
-
-        Vaisseau vaisseauPrecedent=vaisseauAccoste;
-
-        vaisseauAccoste=nouveauVaisseau;
-
-        return vaisseauPrecedent;
-
     }
 
     static String expansion (double milliardsDAnneesLumiere){
