@@ -26,12 +26,12 @@ public class HelloUniverse {
         PlaneteGazeuse neptune = new PlaneteGazeuse("Neptune");
         neptune.diametre = 49532;
 
-        VaisseauDeGuerre chasseur = new VaisseauDeGuerre();
+        Vaisseau chasseur = new VaisseauDeGuerre();
         chasseur.type = "CHASSEUR";
         chasseur.blindage = 156;
         chasseur.resistanceDuBouclier = 2;
 
-        VaisseauCivil vaisseauMonde = new VaisseauCivil();
+        Vaisseau vaisseauMonde = new VaisseauCivil();
         vaisseauMonde.type = "VAISSEAU-MONDE";
         vaisseauMonde.blindage = 4784;
         vaisseauMonde.resistanceDuBouclier = 30;
@@ -39,7 +39,7 @@ public class HelloUniverse {
         vaisseauMonde.activerBouclier();
         chasseur.activerBouclier();
 
-        chasseur.attaque(vaisseauMonde, "lasers photoniques", 3);
+        ((VaisseauDeGuerre) chasseur).attaque(vaisseauMonde, "lasers photoniques", 3);
 
         vaisseauMonde.desactiverBouclier();
 

@@ -3,6 +3,12 @@ package exercices;
 public class VaisseauDeGuerre extends Vaisseau {
     boolean armesDesactivees = false;
 
+    @Override
+    void activerBouclier() {
+        super.activerBouclier();
+        desactiverArmes();
+    }
+
     void desactiverArmes() {
         armesDesactivees = true;
         System.out.println("Désactivation des armes d'un vaisseau de type " + type);
