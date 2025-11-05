@@ -36,7 +36,7 @@ public class PropertiesSystem {
         try {
             String timestamp = new java.util.Date().toString();
             System.out.println("=== " + timestamp + " ===");
-            System.out.println("ok: Début du traitement");
+            System.out.println("Début du traitement");
 
             // ========== SIMULATION D'ERREUR ==========
             // Option 1 : Division par zéro
@@ -56,15 +56,15 @@ public class PropertiesSystem {
 
             Long startProcess = System.nanoTime();
             Long endProcess = System.nanoTime();
-            System.out.println("ok: Durée: " + (endProcess - startProcess) + "ns");
+            System.out.println("Durée: " + (endProcess - startProcess) + "ns");
             System.out.println(System.getProperties());
-            System.out.println("ok: Programme terminé avec succès");
+            System.out.println("Programme terminé avec succès");
             System.exit(0);
 
         } catch (Exception e) {
             String timestamp = new java.util.Date().toString();
             System.err.println("=== " + timestamp + " ===");
-            System.err.println("error: " + e.getMessage());
+            System.err.println(e.getMessage());
             e.printStackTrace();
             System.exit(1);
         }
