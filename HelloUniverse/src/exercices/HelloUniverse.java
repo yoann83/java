@@ -26,13 +26,11 @@ public class HelloUniverse {
         PlaneteGazeuse neptune = new PlaneteGazeuse("Neptune");
         neptune.diametre = 49532;
 
-        Vaisseau chasseur = new VaisseauDeGuerre();
-        chasseur.type = "CHASSEUR";
+        Vaisseau chasseur = new VaisseauDeGuerre("CHASSEUR", 3);
         chasseur.blindage = 156;
         chasseur.resistanceDuBouclier = 2;
 
-        Vaisseau vaisseauMonde = new VaisseauCivil();
-        vaisseauMonde.type = "VAISSEAU-MONDE";
+        Vaisseau vaisseauMonde = new VaisseauCivil("VAISSEAU-MONDE", 200);
         vaisseauMonde.blindage = 4784;
         vaisseauMonde.resistanceDuBouclier = 30;
 
@@ -48,5 +46,33 @@ public class HelloUniverse {
 
         mars.accueillirVaisseau(vaisseauMonde);
         mars.accueillirVaisseau(chasseur);
+
+        // Étape 1
+        Vaisseau chasseur2 = new VaisseauDeGuerre("CHASSEUR", 3);
+        terre.accueillirVaisseau(chasseur2);
+        int refuse1 = chasseur2.emporterCargaison(20);
+        System.out.println(refuse1);
+
+        // Étape 2
+        Vaisseau fregate1 = new VaisseauDeGuerre("FREGATE", 100);
+        terre.accueillirVaisseau(fregate1);
+        int refuse2 = fregate1.emporterCargaison(45);
+        System.out.println(refuse2);
+        int refuse3 = fregate1.emporterCargaison(12);
+        System.out.println(refuse3);
+
+        // Étape 3
+        Vaisseau fregate2 = new VaisseauDeGuerre("FREGATE", 14);
+        terre.accueillirVaisseau(fregate2);
+        int refuse4 = fregate2.emporterCargaison(30);
+        System.out.println(refuse4);
+
+        // Étape 4
+        Vaisseau vaisseauMonde2 = new VaisseauCivil("VAISSEAU-MONDE", 200);
+        terre.accueillirVaisseau(vaisseauMonde2);
+        int refuse5 = vaisseauMonde2.emporterCargaison(1560);
+        System.out.println(refuse5);
+        int refuse6 = vaisseauMonde2.emporterCargaison(600);
+        System.out.println(refuse6);
     }
 }

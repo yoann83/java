@@ -1,6 +1,6 @@
 package exercices;
 
-public class Planete {
+public abstract class Planete {
     String nom;
     int diametre;
     Atmosphere atmosphere;
