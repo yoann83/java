@@ -2,9 +2,7 @@ package perso;
 
 public class HelloUniverse2 {
     public static void main(String... args) {
-        /** ****************** **/
-        /** EXERCICE PERSO **/
-        /** ****************** **/
+        /************* EXERCICE PERSO *************/
 
         int ageDuCapitaine = 30;
         long dateNaissance = 200519801201L;

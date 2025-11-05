@@ -1,0 +1,12 @@
+=== Wed Nov 05 13:37:59 CET 2025 ===
+error: / by zero
+java.lang.ArithmeticException: / by zero
+	at perso.PropertiesSystem.main(PropertiesSystem.java:43)
+=== Wed Nov 05 13:40:15 CET 2025 ===
+error: Cannot invoke "String.length()" because "<local2>" is null
+java.lang.NullPointerException: Cannot invoke "String.length()" because "<local2>" is null
+	at perso.PropertiesSystem.main(PropertiesSystem.java:47)
+=== Wed Nov 05 15:39:15 CET 2025 ===
+error: Cannot invoke "String.length()" because "<local2>" is null
+java.lang.NullPointerException: Cannot invoke "String.length()" because "<local2>" is null
+	at perso.PropertiesSystem.main(PropertiesSystem.java:47)
