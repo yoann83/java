@@ -6,6 +6,7 @@ public class Planete {
     String nom;
     long diametre;
     String matiere;
+    TypeMinerais minerais = TypeMinerais.FER;
 
     // le constructeur sans paramètre en premier
     Planete() {
@@ -13,8 +14,29 @@ public class Planete {
     }
 
     // Constructeur avec paramètre nom
-    public Planete(String nom) {
+    public Planete(String nom, TypeMinerais minerais) {
         this.nom = nom;
+
+        //old qui fonctionne
+//        switch ( minerais) {
+//            case FER :
+//                System.out.println(nom +" à du "+ minerais + " à la surface !");
+//                break;
+//            case PLOMB:
+//                System.out.println(nom +" à du "+ minerais + " à la surface !");
+//                break;
+//            case PLATINE:
+//                System.out.println(nom +" à de la "+ minerais + " à la surface !");
+//                break;
+//            case OR:
+//                System.out.println(nom +" à de l'"+ minerais + " à la surface !");
+//                break;
+//            default:
+//                System.out.println(nom + "n'a aucun minerais sur la surface");
+//                break;
+//        }
+
+        System.out.println(nom +" à de l'"+ minerais.nomtypeMinerais + " à la surface !");
     }
 
     public static String updateNbPlanetes(int actual, int correction) {

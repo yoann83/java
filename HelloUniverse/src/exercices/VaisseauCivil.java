@@ -2,25 +2,32 @@ package exercices;
 
 public class VaisseauCivil extends Vaisseau {
 
-    public VaisseauCivil(String type) {
+    public VaisseauCivil(TypeVaisseau type) {
         this.type = type;
-        if (type.equals("CARGO")) {
-            tonnageMax = 500;
-        } else if (type.equals("VAISSEAU-MONDE")) {
-            tonnageMax = 2000;
-        }
 
+        switch(type) {
+            case CARGO:
+                tonnageMax = 500;
+                break;
+            case VAISSEAUMONDE:
+                tonnageMax = 2000;
+                break;
+            default:
+                tonnageMax = 0; // sécurité
+        }
     }
 
+    @Override
     int emporterCargaison(int tonnage) {
 
         int tonnageRestant = tonnageMax - tonnageActuel;
+
         if (tonnage > tonnageRestant) {
             tonnageActuel = tonnageMax;
-            return tonnage-tonnageRestant;
+            return tonnage - tonnageRestant;
         }
-        tonnageActuel+=tonnage;
+
+        tonnageActuel += tonnage;
         return 0;
     }
-
 }
