@@ -25,7 +25,7 @@ public class HelloUniverse2 {
         Boolean testCompareEqualIgnoreCase = chaine1.equalsIgnoreCase(chaine3);
 
         // true, car il a dèjà aloué un espace (string) avec la meme valeur
-        // donc java optimise en récupérent la meme valeur stcoké
+        // donc java optimise en récupérent la meme valeur stocké
 //        System.out.println("Compare Simple : " + testCompareSimple);
 
         // true, car il test vraiment et strictement les valeurs comme l'équivalence avec ===
@@ -62,7 +62,7 @@ public class HelloUniverse2 {
         TypeMinerais minerais = TypeMinerais.OR;
         new Planete("Geromino",minerais);
 
-        /*----------------------------------------*/
+        /*------------------ exemple planete ----------------------*/
 
 //        Planete mercure = new Planete();
 //        mercure.nom = "Mercure";
@@ -122,5 +122,9 @@ public class HelloUniverse2 {
 
 //        neptune.revolution();
 //        mars.rotation();
+
+        /*------------------------------------------------------*/
+        /*-------------- exemple ellipse = enums ---------------*/
+        new Analyseur(); // le constructeur appelle la méthode varargs
     }
 }
