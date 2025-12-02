@@ -4,30 +4,23 @@ public class VaisseauCivil extends Vaisseau {
 
     public VaisseauCivil(TypeVaisseau type) {
         this.type = type;
-
-        switch(type) {
-            case CARGO:
-                tonnageMax = 500;
-                break;
-            case VAISSEAUMONDE:
-                tonnageMax = 2000;
-                break;
-            default:
-                tonnageMax = 0; // sécurité
+        if (type == TypeVaisseau.CARGO) {
+            tonnageMax = 500;
+        } else if (type == TypeVaisseau.VAISSEAUMONDE) {
+            tonnageMax = 2000;
         }
+
     }
 
-    @Override
     int emporterCargaison(int tonnage) {
 
         int tonnageRestant = tonnageMax - tonnageActuel;
-
         if (tonnage > tonnageRestant) {
             tonnageActuel = tonnageMax;
-            return tonnage - tonnageRestant;
+            return tonnage-tonnageRestant;
         }
-
-        tonnageActuel += tonnage;
+        tonnageActuel+=tonnage;
         return 0;
     }
+
 }

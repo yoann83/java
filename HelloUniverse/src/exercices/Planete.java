@@ -3,12 +3,14 @@ package exercices;
 public abstract class Planete {
     String nom;
     int diametre;
+
     Atmosphere atmosphere;
+
     static String forme="Sphérique";
     static int nbPlanetesDecouvertes;
 
     Planete(String nom){
-        this.nom = nom;
+        this.nom=nom;
         nbPlanetesDecouvertes++;
     }
 
@@ -21,6 +23,8 @@ public abstract class Planete {
         System.out.println("Je suis la planète "+nom+" et je tourne sur moi-même de "+degres+" degrés.");
         return degres/360;
     }
+
+
 
     static String expansion (double milliardsDAnneesLumiere){
         if (milliardsDAnneesLumiere < 14){
