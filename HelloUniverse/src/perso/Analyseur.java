@@ -1,5 +1,7 @@
 package perso;
 
+import fr.java.cours.perso.Niveau;
+
 import java.util.*;
 
 public class Analyseur {
