@@ -125,8 +125,21 @@ public class HelloUniverse2 {
 //        neptune.revolution();
 //        mars.rotation();
 
-        /*------------------------------------------------------*/
         /*-------------- exemple ellipse = enums ---------------*/
         new Analyseur(); // le constructeur appelle la méthode varargs
+
+        /*-------------- exemple exception ---------------*/
+        BureauDeChange immat = new BureauDeChange();
+
+        try {
+            immat.immatriculer("AA 125 AAAA"); //LONGUEUR 9 SINON ERREUR
+        } catch (NombreDeCharacteresInvalideException e) {
+            System.out.println("Erreur : " + e.getMessage());
+            return;
+        } finally {
+            System.out.println("Ce message sera toujours affiché.");
+        }
+
+        System.out.println("Suite du code !");
     }
 }

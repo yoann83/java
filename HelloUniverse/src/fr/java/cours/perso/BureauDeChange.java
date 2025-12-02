@@ -1,6 +1,8 @@
 package fr.java.cours.perso;
 
 public class BureauDeChange {
+    private String immatriculation;
+
     public static void main(String[] args) {
         // Variables pour le montant initial et le taux de change
         double montantEuros = 1500.0;  // Montant en euros (rond, sans centimes)
@@ -18,5 +20,14 @@ public class BureauDeChange {
 
         // Affichage plus détaillé du calcul
         System.out.printf("Robert recevra exactement %.2f dollars américains%n", montantDollars);
+    }
+
+    public void immatriculer(String numeroImmatriculation) throws NombreDeCharacteresInvalideException {
+        if (numeroImmatriculation.length()!=9){
+            throw new NombreDeCharacteresInvalideException("Le numéro " + numeroImmatriculation + " ne comporte pas le nombre de caractères attendus.");
+        } else {
+            System.out.println("Longueur reçue = " + numeroImmatriculation.length());
+        }
+        this.immatriculation=numeroImmatriculation;
     }
 }
